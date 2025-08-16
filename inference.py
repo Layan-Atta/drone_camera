@@ -2,6 +2,7 @@ import cv2
 import numpy as np
 import tensorflow as tf
 from tensorflow.keras.models import load_model
+import tflite_runtime.interpreter as tflite
 
 
 # -------------------------------
@@ -22,7 +23,7 @@ def load_soil_model(model_path: str):
     """
     Load a TFLite model for soil classification.
     """
-    interpreter = tf.lite.Interpreter(model_path=model_path)
+    interpreter = tflite.Interpreter(model_path=model_path)
     interpreter.allocate_tensors()
     return interpreter
 
