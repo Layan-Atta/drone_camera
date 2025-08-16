@@ -1,0 +1,3 @@
+Tomato-Bacterial_spot
+Potato-Barly blight
+Corn-Common_rust
